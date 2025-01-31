@@ -10,7 +10,7 @@ from requests.exceptions import RequestException, ReadTimeout, ConnectionError
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 API_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-CHANNEL_ID = os.getenv('TELEGRAM_CHANNEL_ID')
+CHANNEL_ID = '@lavender_test'
 bot = telebot.TeleBot(API_TOKEN)
 
 NOBITEX_URL = 'https://api.nobitex.ir/market/stats'
