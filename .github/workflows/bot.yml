@@ -1,8 +1,6 @@
 name: Telegram Bot Price Update
 
 on:
-  schedule:
-    - cron: '*/1 * * * *'  # Runs every minute
   workflow_dispatch:  # Allows manual triggering
   push:
     branches:
