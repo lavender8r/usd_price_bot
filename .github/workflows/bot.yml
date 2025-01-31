@@ -26,7 +26,7 @@ jobs:
           pip install requests
 
       - name: Run Telegram bot script
-        run: python your_script.py
+        run: python initial_script.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
