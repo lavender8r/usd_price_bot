@@ -29,7 +29,7 @@ def get_usd_rate():
         response = requests.get(f"{NOBITEX_URL}?srcCurrency=usdt", headers=HEADERS, timeout=10)
         response.raise_for_status()
         data = response.json()
-        latest_value = int(data['stats']['usdt-rls']['latest'])
+        latest_value = int(data['stats']['usdt-rls']['latest'])/10
         rounded_price = round(latest_value / 50) * 50
         return rounded_price
     except (RequestException, json.JSONDecodeError) as e:
