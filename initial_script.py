@@ -84,6 +84,10 @@ def send_price(message):
 
 def start_bot():
     while True:
+        global running
+        if not running:
+            running = True
+            threading.Thread(target=send_to_channel, daemon=True).start()
         try:
             bot.polling(non_stop=True, interval=1)
         except ReadTimeout:
